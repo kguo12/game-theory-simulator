@@ -1,27 +1,21 @@
-alert("script.js loaded");
-
 document.getElementById("runBtn").addEventListener("click", () => {
-  alert("Button clicked");
   const table = document.getElementById("payoffTable");
   const matrix = [];
 
   for (let i = 1; i < table.rows.length; i++) {
     const row = [];
     for (let j = 1; j < table.rows[i].cells.length; j++) {
-      const text = table.rows[i].cells[j].innerText.trim();
-      row.push(text);
+      row.push(table.rows[i].cells[j].innerText.trim());
     }
     matrix.push(row);
   }
 
-  // Convert text to numbers
   const payoffMatrix = matrix.map(row =>
     row.map(parsePayoff)
   );
 
   const result = findOneDominatedStrategy(payoffMatrix);
 
-  console.log("Dominance result:", result);
   if (result) {
     animateElimination(result);
     document.getElementById("output").innerText =
@@ -30,9 +24,6 @@ document.getElementById("runBtn").addEventListener("click", () => {
     document.getElementById("output").innerText =
       "No strictly dominated strategies found.";
   }
-
-/*  document.getElementById("output").innerText =
-    JSON.stringify(payoffMatrix, null, 2);*/
 });
 
 // Parse user inputted payoff matrix into numbers
