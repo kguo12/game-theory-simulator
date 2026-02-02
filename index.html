@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Game Theory Simulator</title>
+  <meta charset="UTF-8">
+  <title>Game Theory Simulator</title>
+
+  <style>
+    .eliminated {
+      background-color: #f8d7da;
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
+  </style>
 </head>
-<h1>Iterated Deletion of Dominated Strategies</h1>
+
+<body>
+    <h1>Iterated Deletion of Dominated Strategies</h1>
 
 <p>Edit the payoff matrix below, then run elimination.</p>
 
@@ -31,5 +42,6 @@
 <button id="runBtn">Run one elimination step</button>
 
 <pre id="output"></pre>
-
+<script src="script.js"></script>
+</body>
 </html>
