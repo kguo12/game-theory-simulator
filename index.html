@@ -4,11 +4,32 @@
     <meta charset="UTF-8">
     <title>Game Theory Simulator</title>
 </head>
-<body>
-    <h1>Iterated Deletion of Dominated Strategies</h1>
+<h1>Iterated Deletion of Dominated Strategies</h1>
 
-    <p>This will be my simulator.</p>
+<p>Edit the payoff matrix below, then run elimination.</p>
 
-    <button>Run</button>
-</body>
+<table border="1" id="payoffTable">
+  <tr>
+    <th></th>
+    <th>L</th>
+    <th>R</th>
+  </tr>
+  <tr>
+    <th>U</th>
+    <td contenteditable="true">(2,1)</td>
+    <td contenteditable="true">(0,0)</td>
+  </tr>
+  <tr>
+    <th>D</th>
+    <td contenteditable="true">(1,2)</td>
+    <td contenteditable="true">(1,1)</td>
+  </tr>
+</table>
+
+<br>
+
+<button id="runBtn">Run one elimination step</button>
+
+<pre id="output"></pre>
+
 </html>
