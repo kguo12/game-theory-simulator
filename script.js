@@ -1,3 +1,5 @@
+alert("script.js loaded");
+
 document.getElementById("runBtn").addEventListener("click", () => {
   alert("Button clicked");
   const table = document.getElementById("payoffTable");
