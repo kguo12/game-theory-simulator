@@ -15,7 +15,7 @@ document.getElementById("runBtn").addEventListener("click", () => {
   }
 
   // Convert text to numbers
-  const payoffMatrix = rawMatrix.map(row =>
+  const payoffMatrix = matrix.map(row =>
     row.map(parsePayoff)
   );
 
@@ -31,8 +31,8 @@ document.getElementById("runBtn").addEventListener("click", () => {
       "No strictly dominated strategies found.";
   }
 
-  document.getElementById("output").innerText =
-    JSON.stringify(payoffMatrix, null, 2);
+/*  document.getElementById("output").innerText =
+    JSON.stringify(payoffMatrix, null, 2);*/
 });
 
 // Parse user inputted payoff matrix into numbers
