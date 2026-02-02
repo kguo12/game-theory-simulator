@@ -1,4 +1,5 @@
 document.getElementById("runBtn").addEventListener("click", () => {
+  alert("Button clicked");
   const table = document.getElementById("payoffTable");
   const matrix = [];
 
@@ -18,6 +19,7 @@ document.getElementById("runBtn").addEventListener("click", () => {
 
   const result = findOneDominatedStrategy(payoffMatrix);
 
+  console.log("Dominance result:", result);
   if (result) {
     animateElimination(result);
     document.getElementById("output").innerText =
